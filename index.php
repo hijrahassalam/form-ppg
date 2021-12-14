@@ -18,6 +18,7 @@
             ;
         }
     </style>
+    <script src="api.js" defer></script>
 </head>
 
 <body style="background-color: #0b1c33;">
@@ -50,33 +51,29 @@
                         <div class="row">
                             <div class="col-6 mb-3">
                                 <label for="exampleFormControlInput1" class="form-label">Provinsi</label>
-                                <select type="email" class="form-control" id="provinsi" required>
-                                    <option>Jawa Tengah</option>
+                                <select type="email" class="form-control" id="provinsi" onchange="updateKota(this)" required disabled>
                                 </select>
                             </div>
                             <div class="col-6 mb-3">
                                 <label for="exampleFormControlInput1" class="form-label">Kota</label>
-                                <select type="email" class="form-control" id="kota" required>
-                                    <option>Jawa Tengah</option>
+                                <select type="text" class="form-control" id="kota" onchange="updateKecamatan(this)" required disabled>
                                 </select>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col mb-3">
                                 <label for="exampleFormControlInput1" class="form-label">Kecamatan</label>
-                                <select type="email" class="form-control" id="kecamatan" required>
-                                    <option>Jawa Tengah</option>
+                                <select type="text" class="form-control" id="kecamatan" onchange="updateKelurahan(this)" required disabled>
                                 </select>
                             </div>
                             <div class="col mb-3">
                                 <label for="exampleFormControlInput1" class="form-label">Kelurahan</label>
-                                <select type="email" class="form-control" id="kelurahan" required>
-                                    <option>Jawa Tengah</option>
+                                <select type="text" class="form-control" id="kelurahan" required disabled>
                                 </select>
                             </div>
                             <div class="col mb-3">
                                 <label for="exampleFormControlInput1" class="form-label">Kode Pos</label>
-                                <input type="email" class="form-control" id="kode-pos" placeholder="Kode Pos" required>
+                                <input type="number" class="form-control" id="kode-pos" placeholder="Kode Pos" required>
                             </div>
                         </div>
                         <div class="text-end">
