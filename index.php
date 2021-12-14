@@ -37,11 +37,11 @@
                         <div class="row">
                             <div class="col-6 mb-3">
                                 <label for="exampleFormControlInput1" class="form-label">Nama Lengkap</label>
-                                <input type="email" class="form-control" id="nama" placeholder="Nama Lengkap" required>
+                                <input type="text" class="form-control" id="nama" placeholder="Nama Lengkap" required>
                             </div>
                             <div class="col-6 mb-3">
                                 <label for="exampleFormControlInput1" class="form-label">Nomor UKG</label>
-                                <input type="email" class="form-control" id="no-ukg" placeholder="Nomor UKG" required>
+                                <input type="number" class="form-control" id="no-ukg" placeholder="Nomor UKG" required>
                             </div>
                         </div>
                         <div class="mb-3">
