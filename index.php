@@ -33,51 +33,51 @@
                     </p>
                 </div>
                 <div class="card px-3 py-3" style="margin: 20px;">
-                    <form>
+                    <form action="model/insert.php" method="POST">
                         <div class="row">
                             <div class="col-6 mb-3">
                                 <label for="exampleFormControlInput1" class="form-label">Nama Lengkap</label>
-                                <input type="text" class="form-control" id="nama" placeholder="Nama Lengkap" required>
+                                <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama Lengkap" required>
                             </div>
                             <div class="col-6 mb-3">
                                 <label for="exampleFormControlInput1" class="form-label">Nomor UKG</label>
-                                <input type="number" class="form-control" id="no-ukg" placeholder="Nomor UKG" required>
+                                <input type="number" class="form-control" id="no_ukg" name="no_ukg" placeholder="Nomor UKG" required>
                             </div>
                         </div>
                         <div class="mb-3">
                             <label for="exampleFormControlTextarea1" class="form-label">Alamat Lengkap</label>
-                            <textarea class="form-control" id="alamat" rows="3" required></textarea>
+                            <textarea class="form-control" id="alamat" name="alamat" rows="3" required></textarea>
                         </div>
                         <div class="row">
                             <div class="col-6 mb-3">
                                 <label for="exampleFormControlInput1" class="form-label">Provinsi</label>
-                                <select type="email" class="form-control" id="provinsi" onchange="updateKota(this)" required disabled>
+                                <select type="email" class="form-select" id="provinsi" name="provinsi" onchange="updateKota(this)" required disabled>
                                 </select>
                             </div>
                             <div class="col-6 mb-3">
                                 <label for="exampleFormControlInput1" class="form-label">Kota</label>
-                                <select type="text" class="form-control" id="kota" onchange="updateKecamatan(this)" required disabled>
+                                <select type="text" class="form-select" id="kota" name="kota" onchange="updateKecamatan(this)" required disabled>
                                 </select>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col mb-3">
                                 <label for="exampleFormControlInput1" class="form-label">Kecamatan</label>
-                                <select type="text" class="form-control" id="kecamatan" onchange="updateKelurahan(this)" required disabled>
+                                <select type="text" class="form-select" id="kecamatan" name="kecamatan" onchange="updateKelurahan(this)" required disabled>
                                 </select>
                             </div>
                             <div class="col mb-3">
                                 <label for="exampleFormControlInput1" class="form-label">Kelurahan</label>
-                                <select type="text" class="form-control" id="kelurahan" required disabled>
+                                <select type="text" class="form-select" id="kelurahan" name="kelurahan" required disabled>
                                 </select>
                             </div>
                             <div class="col mb-3">
                                 <label for="exampleFormControlInput1" class="form-label">Kode Pos</label>
-                                <input type="number" class="form-control" id="kode-pos" placeholder="Kode Pos" required>
+                                <input type="number" class="form-control" id="kode-pos" name="kodepos" placeholder="Kode Pos" required>
                             </div>
                         </div>
                         <div class="text-end">
-                            <button class="btn btn-primary" name="submit" type="submit">Submit</button>
+                            <button class="btn btn-primary" type="submit">Submit</button>
                         </div>
                     </form>
                 </div>
@@ -86,28 +86,5 @@
     </div>
     </div>
 </body>
-<?php
-
-// Check If form submitted, insert form data into users table.
-if (isset($_POST['submit'])) {
-    $no_ukg = $_POST['no_ukg'];
-    $nama = $_POST['nama'];
-    $alamat = $_POST['alamat'];
-    $provinsi = $_POST['provinsi'];
-    $kota = $_POST['kota'];
-    $kecamatan = $_POST['kecamatan'];
-    $kelurahan = $_POST['kelurahan'];
-    $kodepos = $_POST['kodepos'];
-
-    // include database connection file
-    include_once("db.php");
-
-    // Insert user data into table
-    $result = mysqli_query($mysqli, "INSERT INTO peserta (no_ukg,nama,alamat,provinsi,kota,kecamatan,kelurahan,kodepos) VALUES('$no_ukg','$nama','$alamat','$provinsi','$kota','$kecamatan','$kelurahan','$kodepos')");
-
-    // Show message when user added
-    echo "User added successfully.";
-}
-?>
 
 </html>
