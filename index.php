@@ -77,7 +77,7 @@
                             </div>
                         </div>
                         <div class="text-end">
-                            <button class="btn btn-primary" type="submit">Submit</button>
+                            <button class="btn btn-primary" name="submit" type="submit">Submit</button>
                         </div>
                     </form>
                 </div>

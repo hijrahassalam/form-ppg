@@ -1,7 +1,6 @@
 <?php
-
-// Check If form submitted, insert form data into users table.
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+include_once 'db.php';
+if (isset($_POST['submit'])) {
     $nama = $_POST['nama'];
     $no_ukg = $_POST['no_ukg'];
     $alamat = $_POST['alamat'];
@@ -11,13 +10,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $kelurahan = $_POST['kelurahan'];
     $kodepos = $_POST['kodepos'];
 
-    // include database connection file
-    include_once("db.php");
-
-    // Insert user data into table
-    $result = mysqli_query($mysqli, "INSERT INTO peserta (no_ukg,nama,alamat,provinsi,kota,kecamatan,kelurahan,kodepos) VALUES('$no_ukg','$nama','$alamat','$provinsi','$kota','$kecamatan','$kelurahan','$kodepos')");
-
-    // Show message when user added
-    echo "User added successfully.";
+    $sql = "INSERT INTO peserta (no_ukg,nama,alamat,provinsi,kota,kecamatan,kelurahan,kodepos) VALUES('$no_ukg','$nama','$alamat','$provinsi','$kota','$kecamatan','$kelurahan','$kodepos')";
+    if (mysqli_query($conn, $sql)) {
+        echo "New record created successfully !";
+    } else {
+        echo "Error: " . $sql . "
+" . mysqli_error($conn);
+    }
+    mysqli_close($conn);
 }
-?>
