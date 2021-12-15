@@ -12,7 +12,7 @@ if (isset($_POST['submit'])) {
 
     $sql = "INSERT INTO peserta (no_ukg,nama,alamat,provinsi,kota,kecamatan,kelurahan,kodepos) VALUES('$no_ukg','$nama','$alamat','$provinsi','$kota','$kecamatan','$kelurahan','$kodepos')";
     if (mysqli_query($conn, $sql)) {
-        echo "New record created successfully !";
+        header("Location: ../redirect.php");
     } else {
         echo "Error: " . $sql . "
 " . mysqli_error($conn);

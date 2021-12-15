@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Title -->
-    <title>Landkit</title>
+    <title>Validasi Alamat Peserta PPG FKIP UNS</title>
     <!-- Bootsrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- Font -->
@@ -26,11 +26,9 @@
         <div class="row align-items-center gx-0 min-vh-100 justify-content-center">
             <div class="col-12 col-md-10 col-lg-9 col-xl-8">
                 <div class="row text-center">
-                    <p class="">
-                    <h1 class="poppins-font text-light">Form PPG</h1>
+                    <h1 class="poppins-font text-light">Validasi Alamat Peserta PPG</h1>
                     <h7 class="poppins-font text-light">Fakultas Keguruan dan Ilmu Pendidikan</h7>
                     <h7 class="poppins-font text-light">Universitas Sebelas Maret Surakarta</h7>
-                    </p>
                 </div>
                 <div class="card px-3 py-3" style="margin: 20px;">
                     <form action="model/insert.php" method="POST">
@@ -77,9 +75,12 @@
                             </div>
                         </div>
                         <div class="text-end">
-                            <button class="btn btn-primary" name="submit" type="submit">Submit</button>
+                            <button class="btn btn-primary" name="submit" type="submit">Simpan</button>
                         </div>
                     </form>
+                </div>
+                <div class="row text-center">
+                    <h7 class="poppins-font text-light">Kembali ke <a class="text-decoration-none" href="https://ppg.fkip.uns.ac.id/">Halaman Utama</a></h7>
                 </div>
             </div>
         </div>
