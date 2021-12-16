@@ -29,10 +29,18 @@
                     <h1 class="poppins-font text-light">Data Alamat Berhasil Disimpan</h1>
                     <br><br><br>
 
-                    
+                    <p class="poppins-font text-light">Selanjutnya harap untuk mengisi formulir survei berikut:</p>
+                    <p class="poppins-font text-light"><a class="text-decoration-none" href="https://bit.ly/PPG_DALJAB" target="_blank">https://bit.ly/PPG_DALJAB</a></p>
+                    <br>
+                    <p class="poppins-font"><strong class="px-2" style="background-color: white">SURVEI INI BERSIFAT WAJIB. </strong></p>
+                    <br>
+                    <p class="poppins-font text-light">Apabila formulir survei tidak diisi,<br>maka akan mempengaruhi proses pengiriman sertifikat pendidik.</p>
 
-                    <h7 class="poppins-font text-light">Kembali ke halaman <a class="text-decoration-none" href="https://ppg.fkip.uns.ac.id/validasi-alamat">Validasi Alamat</a></h7>
-                    <h7 class="poppins-font text-light">Atau kembali ke <a class="text-decoration-none" href="https://ppg.fkip.uns.ac.id/">Halaman Utama</a> web PPG FKIP UNS</h7>
+                    <p class="poppins-font text-light pb-0 mb-0">Terima kasih</p>
+                    <p class="poppins-font text-light pt-1 fs-4">PPG UNS</p>
+
+                    <h7 class="text-light pt-5">Kembali ke halaman <a class="text-decoration-none" href="https://ppg.fkip.uns.ac.id/validasi-alamat">Validasi Alamat</a></h7>
+                    <h7 class="text-light">Atau kembali ke <a class="text-decoration-none" href="https://ppg.fkip.uns.ac.id/">Halaman Utama</a> web PPG FKIP UNS</h7>
                     </p>
                 </div>
             </div>
