@@ -10,7 +10,7 @@ if (isset($_POST['submit'])) {
     $kelurahan = $_POST['kelurahan'];
     $kodepos = $_POST['kodepos'];
 
-    $sql = "INSERT INTO peserta (no_ukg,nama,alamat,provinsi,kota,kecamatan,kelurahan,kodepos) VALUES('$no_ukg','$nama','$alamat','$provinsi','$kota','$kecamatan','$kelurahan','$kodepos')";
+    $sql = "INSERT INTO validasi_alamat (no_ukg,nama,alamat,provinsi,kota,kecamatan,kelurahan,kodepos) VALUES('$no_ukg','$nama','$alamat','$provinsi','$kota','$kecamatan','$kelurahan','$kodepos')";
     if (mysqli_query($conn, $sql)) {
         header("Location: ../redirect.php");
     } else {

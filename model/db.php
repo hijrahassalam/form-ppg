@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "db_ppg";
+$username = "ppgfkip";
+$password = "DSy0L7gZu3Kq";
+$dbname = "ppgfkip_web";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
