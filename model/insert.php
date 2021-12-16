@@ -10,12 +10,14 @@ if (isset($_POST['submit'])) {
     $kelurahan = $_POST['kelurahan'];
     $kodepos = $_POST['kodepos'];
 
-    $sql = "INSERT INTO validasi_alamat (no_ukg,nama,alamat,provinsi,kota,kecamatan,kelurahan,kodepos) VALUES('$no_ukg','$nama','$alamat','$provinsi','$kota','$kecamatan','$kelurahan','$kodepos')";
-    if (mysqli_query($conn, $sql)) {
+    $sql = $conn->prepare("INSERT INTO validasi_alamat (nama,no_ukg,alamat,provinsi,kota,kecamatan,kelurahan,kodepos) VALUES (?,?,?,?,?,?,?,?)");
+    $sql->bind_param('sisssssi', $nama, $no_ukg, $alamat, $provinsi, $kota, $kecamatan, $kelurahan, $kodepos);
+
+    if ($sql->execute()) {
         header("Location: ../redirect.php");
     } else {
-        echo "Error: " . $sql . "
-" . mysqli_error($conn);
+        echo "Error: " . $sql . " - " . mysqli_error($conn);
     }
+    $sql->close();
     mysqli_close($conn);
 }
